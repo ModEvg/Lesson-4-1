@@ -1,19 +1,18 @@
-﻿// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-//452 -> 11
-//82 -> 10
-//9012 -> 12
+﻿// Задача 27: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
+Console.Write($"Даны 8 случайных чисел от 0 до 100 \n");
+int [] massiv = new int[8];
 
-Console.Write($"Введите число А: \n");
-int A = int.Parse(Console.ReadLine()!);
-int sum = 0;
-int ostatok = 1;
-
- while (ostatok > 0 || A > 0)
+for (int i = 0; i<7; i++)
 {
-    ostatok = A%10;
-    A = A/10;
-    sum = sum+ostatok;
+    massiv[i] = new Random().Next(0,100);
+    Console.Write($" {massiv[i]},");
 }
-Console.Write($"Сумма цифр числа А равна {sum} \n");
-
+massiv[7] = new Random().Next(0,100);
+Console.Write($" {massiv[7]}\n");
+Console.Write($"Преобразуем числа в массив -> [");
+for (int i = 0; i<7; i++)
+{
+   Console.Write($"{massiv[i]},"); 
+}
+Console.Write($"{massiv[7]}]");

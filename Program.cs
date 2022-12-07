@@ -2,8 +2,19 @@
 //3, 5 -> 243 (3⁵)
 //2, 4 -> 16
 
+// Способ 1
 Console.Write($"Введите числа А и В: \n");
 int A = int.Parse(Console.ReadLine()!);
 int B = int.Parse(Console.ReadLine()!);
 double C = Math.Pow(A,B);
-Console.Write($"Результат возведения числа А в натуральную степень В равен {C}");
+Console.Write($"Результат возведения числа А в натуральную степень В равен {C} \n");
+
+// Способ 2
+ int S = 1;
+ int i = 1;
+while (i < B+1)
+{
+    S = S*A;
+    i++;
+}
+Console.Write($"Результат возведения числа А в натуральную степень В равен {S} \n");

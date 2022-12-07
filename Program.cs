@@ -1,20 +1,38 @@
-﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-//3, 5 -> 243 (3⁵)
-//2, 4 -> 16
+﻿// Задача 27: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-// Способ 1
-Console.Write($"Введите числа А и В: \n");
-int A = int.Parse(Console.ReadLine()!);
-int B = int.Parse(Console.ReadLine()!);
-double C = Math.Pow(A,B);
-Console.Write($"Результат возведения числа А в натуральную степень В равен {C} \n");
+Console.Write($"Даны 8 случайных чисел от 0 до 100 \n");
 
-// Способ 2
- int S = 1;
- int i = 1;
-while (i < B+1)
+int [] massiv = new int[8];
+for (int i = 0; i<8; i++)
 {
-    S = S*A;
-    i++;
+    massiv[i] = new Random().Next(0,100);
 }
-Console.Write($"Результат возведения числа А в натуральную степень В равен {S} \n");
+Method();
+Console.Write($"  Преобразуем числа в массив -> [");
+Method();
+Console.WriteLine("]");
+
+
+void Method()
+{
+    for (int i = 0; i<7; i++)
+    {
+        Console.Write($"{massiv[i]},"); 
+    }
+    Console.Write($"{massiv[7]}");
+}
+
+
+//for (int i = 0; i<7; i++)
+//{
+    //massiv[i] = new Random().Next(0,100);
+    //Console.Write($" {massiv[i]},");
+//}
+//massiv[7] = new Random().Next(0,100);
+//Console.Write($" {massiv[7]}\n");
+//Console.Write($"Преобразуем числа в массив -> [");
+//for (int i = 0; i<7; i++)
+//{
+  // Console.Write($"{massiv[i]},"); 
+//}
+//Console.Write($"{massiv[7]}]");
